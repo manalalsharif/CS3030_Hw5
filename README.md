@@ -7,40 +7,36 @@ This script has 6 programs to run
 
 The script should take one input parameter (it is positional param) which is the YEAR.
 
-
+----------------
 2- Program 2
   The script will expand the tar.gz files it is a file that acts as a container for other files.
 
-
+----------------
 3- Program 3
   will Loop over the file created from Program 2 
   1- filter those records from "Canadian female" residents, however, if the email field is NULL, should substitute it with the
   "dwaldo@weber.edu" (the DB should not take NULL values)
   2- Create a new file, with the filter records, but execluding the header and ID field
 
-
-
+----------------
 4- Program 4
-A script that compress  the filter data file
+A script that compress the filtered data file that created in program 3
 
-
-
+----------------
 5- Program 5
 will transfer the file by usingSCP 
 (This program should allow for a -u option that allows for the specification of a username The file created from program 4, will be transfer to via SCP)
 
-
-
+----------------
 6- Program 6
 the script will clean all temporary files
 Delete the temp folder with all the files you expanded from program 2
 
-
-
+----------------
 7- Program 7
 last script will wrap all preivous programs from program 1 through 6 to run
 
-
+----------------
 Finally:
 To Run:
 This script will take the four input parameters, as 3 parameters are required and the 4th one is optional
