@@ -1,8 +1,8 @@
 
 #!/bin/bash
 
-firstY=`date +%Y-%m`
-lastY=`date +%Y-%m`
+firstY=`date +%Y`
+lastY=`date +%Y`
 
 while getopts "f:l:e:u" opt; do
 case "$opt" in
@@ -41,7 +41,7 @@ elif [[ "$4" =  "$Email"  ]]; then
  
  
  
- fi
+fi
 program2
 program3
 program4
