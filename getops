@@ -1,53 +1,46 @@
-
 #!/bin/bash
+
 
 firstY=`date +%Y`
 lastY=`date +%Y`
-
 while getopts "f:l:e:u" opt; do
 case "$opt" in
 
-   f) FirstYear=$OPTARG;;
+ 	f) FirstYear=$OPTARG;;
 
-   l) LastYear=$OPTARG;;
-
-   e) Email=$OPTARG;;
+     l) LastYear=$OPTARG;;
+ 
+     e) Email=$OPTARG;;
   
-   u) User=$OPTARG;;
+      u) Userr=$OPTARG;;
 
-   \?) echo "Invalid argument"
-     exit 1;;
-   esac
-done
+    \?) echo "Invalid argument"
+         exit 1;;
+         esac
+ done
 
 shift $((OPTIND-1))
 
-
-if [[  "$1" = "$FirstYear"   ]]; then
+if [[  "$1" = "$FirstYear" && "$2" = "$LastYear"  ]]; then
  ## loop through years
 
-elif [[ "$2" =  "$LastYear"  ]]; then
- 
- 
-elif [[ "$4" =  "$Email"  ]]; then
-     TO_ADDRESS="$Email"
-     FROM_ADDRESS="$Email"
-     SUBJECT="Welcome"
-     BODY="Hi,\n\n Welcome \n\n Regards, \n\n"
-     echo ${BODY}| mail -s ${SUBJECT} ${TO_ADDRESS} -- -r ${FROM_ADDRESS}
- 
- 
- elif [[ "$3" =  "$User"  ]]; then
- 
- 
- 
+        for ((i = 1; <= ; ++i)); do
+done
+#####elif [[ "$2" =  "$LastYear"  ]]; then
+ elif [[ "$3" =  "$Email"  ]]; then
+  TO_ADDRESS="$Email"
+       FROM_ADDRESS="$Email"
+       SUBJECT="Welcome"
+       BODY="Hi,\n\n Welcome to this assignment.\n\n Regards, \n\n"
+        echo ${BODY}| mail -s ${SUBJECT} ${TO_ADDRESS} -- -r ${FROM_ADDRESS}
 fi
+ #calling programs 
 program2
 program3
 program4
 program5
-program6
 wait
+
 
 
 
